@@ -10,7 +10,7 @@ const Blogs = () => {
     const [blogsInfo, setBlogsInfo] = useState([]);
     const [asides, setAsides] = useState([]);
     const [blogs, setBlogs] = useState([]);
-    const [added, setAdded] = useState(0);
+    const [added, setAdded] = useState(false);
 
     useEffect(() => {
         fetch("blogs.json")
@@ -24,12 +24,20 @@ const Blogs = () => {
         //    console.log(title,duration);
     }
     const handleBookMark = (item) => {
-        const newAside = [...blogs, item];
-        setBlogs(newAside);
-        setAdded(item.id);
-        //  console.log(newAside);
+        const index = blogs.findIndex((blog) => blog.id === item.id);
+        if (index !== -1) {
+            toast.info(`${item.title} has been bookmarked again!`);
+            const newAside = [...blogs, item];
+            setBlogs(newAside);
+            setAdded(true);
+        } else {
+            const newAside = [...blogs, item];
+            setBlogs(newAside);
+            setAdded(true);
+        }
+
     }
-     console.log(added)
+    console.log(added)
 
     return (
         <div className="blogs-container">

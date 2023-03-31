@@ -9,13 +9,6 @@ const BookMark = ({ blogs, added }) => {
     for (const bookMark of blogs) {
         totalBookMark = totalBookMark + bookMark.count;
     }
-
-    // if (added) {
-    //     console.log('yes call it');
-    //     confirm('');
-    // }
- 
-
     return (
         <div>
             <h4>Bookmarked Blogs :{totalBookMark}</h4>
@@ -31,8 +24,3 @@ const BookMark = ({ blogs, added }) => {
 };
 
 export default BookMark;
-
-
-
-
-
