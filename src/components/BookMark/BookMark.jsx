@@ -12,7 +12,7 @@ const BookMark = ({ blogs }) => {
             <h4>Bookmarked Blogs :{totalBookMark}</h4>
             <div>
                 {
-                    blogs.map(blog =><div className='card'>
+                    blogs.map(blog =><div className='card mb-3'>
                         <h5>{blog.title}</h5>
                     </div> )
                 }

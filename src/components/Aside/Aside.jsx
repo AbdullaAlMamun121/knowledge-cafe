@@ -1,7 +1,7 @@
 import React from 'react';
 import BookMark from '../BookMark/BookMark';
 import './Aside.css'
-const Aside = ({ asides, blogs, added }) => {
+const Aside = ({ asides, blogs }) => {
     
     let readTotal = 0;
     for (const item of asides) {
@@ -12,7 +12,7 @@ const Aside = ({ asides, blogs, added }) => {
             <div className='time-section'>
                 <h3>Spent time on read :{ readTotal} min</h3>
             </div>
-            <BookMark blogs={blogs} added={added}></BookMark>
+            <BookMark blogs={blogs}></BookMark>
         </div>
     );
 };
