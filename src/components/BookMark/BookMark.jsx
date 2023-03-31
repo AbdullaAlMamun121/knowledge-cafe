@@ -1,19 +1,29 @@
 import React from 'react';
 import './BookMark.css';
-const BookMark = ({ blogs }) => {
-    // console.log(blogs);
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+const BookMark = ({ blogs, added }) => {
+    // console.log(added);
+
     let totalBookMark = 0;
     for (const bookMark of blogs) {
         totalBookMark = totalBookMark + bookMark.count;
     }
+
+    // if (added) {
+    //     console.log('yes call it');
+    //     confirm('');
+    // }
+ 
+
     return (
         <div>
             <h4>Bookmarked Blogs :{totalBookMark}</h4>
             <div>
                 {
-                    blogs.map(blog => <div className='card'>
-                        <p>{blog.title }</p>
-                   </div>) 
+                    blogs.map(blog =><div className='card'>
+                        <h5>{blog.title}</h5>
+                    </div> )
                 }
             </div>
         </div>
@@ -21,3 +31,8 @@ const BookMark = ({ blogs }) => {
 };
 
 export default BookMark;
+
+
+
+
+
