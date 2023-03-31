@@ -2,12 +2,11 @@ import React from 'react';
 import { FaBookmark } from 'react-icons/fa';
 import './Blog.css';
 const Blog = (props) => {
-    // console.log(props.blogInfo);
+//   console.log(props.blogInfo);
     const { id, name, img,userImg, date,duration,title,hash_tag } = props.blogInfo;
-    
     const handleReadMore = props.handleReadMore;
+    const handleBookMark = props.handleBookMark;
     
-
     return (
         <div>
             <div class="card mb-3">
@@ -22,7 +21,7 @@ const Blog = (props) => {
                                
                             </div>
                         </div>
-                        <p>{duration} min read <FaBookmark></FaBookmark></p>
+                        <p>{duration} min read <FaBookmark onClick={()=>handleBookMark(props.blogInfo)}></FaBookmark></p>
                         
                     </div>
                     <h5 class="card-title">{title}</h5>

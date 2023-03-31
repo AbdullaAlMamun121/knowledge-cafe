@@ -6,6 +6,8 @@ const Blogs = () => {
 
     const [blogsInfo, setBlogsInfo] = useState([]);
     const [asides, setAsides] = useState([]);
+    const [blogs, setBlogs] = useState([]);
+
     useEffect(() => {
         fetch("blogs.json")
             .then(res => res.json())
@@ -17,17 +19,23 @@ const Blogs = () => {
         setAsides(newAside);
     //    console.log(title,duration);
     }
+    const handleBookMark = (item) => {
+        const newAside = [...blogs,item];
+        setBlogs(newAside);
+        // console.log(newAside);
+   }
 
     return (
         <div className="blogs-container">
             <div className='blog-container'>
                 {
-                    blogsInfo.map(blogInfo=><Blog blogInfo={blogInfo} handleReadMore={handleReadMore}></Blog>)
+                    blogsInfo.map(blogInfo => <Blog blogInfo={blogInfo} handleReadMore={handleReadMore}
+                        handleBookMark={handleBookMark}></Blog>)
                 }
                 
             </div>
             <div>
-                <Aside asides={asides}></Aside>
+                <Aside asides={asides} blogs={blogs}></Aside>
             </div>
         </div>
     );
