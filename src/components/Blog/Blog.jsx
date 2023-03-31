@@ -3,6 +3,9 @@ import './Blog.css';
 const Blog = (props) => {
     // console.log(props.blogInfo);
     const { id, name, img,userImg, date,duration,title,hash_tag } = props.blogInfo;
+    
+    const handleReadMore = props.handleReadMore;
+    
 
     return (
         <div>
@@ -17,11 +20,11 @@ const Blog = (props) => {
                                 <p>{ date}</p>
                             </div>
                         </div>
-                        <p>{duration }</p>
+                        <p>{duration } min read</p>
                     </div>
                     <h5 class="card-title">{title}</h5>
                     <p class="card-text">{hash_tag }</p>
-                    <a href="#">Mark read</a>
+                    <button onClick={()=>handleReadMore(props.blogInfo)}>Mark read</button>
                 </div>
             </div>
         </div>

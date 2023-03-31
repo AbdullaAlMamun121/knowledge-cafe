@@ -1,13 +1,22 @@
 import React from 'react';
 import './Aside.css'
-const Aside = () => {
+const Aside = ({ asides }) => {
+    
+    // console.log(asides);
+
+    let readTotal = 0;
+    for (const item of asides) {
+        readTotal = readTotal + item.duration;
+    }
+    
     return (
         <div>
             <div className='time-section'>
-                <h3>Spent time on read : 177 min</h3>
+                <h3>Spent time on read : {readTotal} min</h3>
             </div>
-            <div className='card'>
-                <h4>Bookmarked Blogs : 8</h4>
+            <h4>Bookmarked Blogs : { (asides.length)}</h4>
+            <div className='card'> 
+            
            </div>
         </div>
     );
