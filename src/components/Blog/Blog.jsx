@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaBookmark } from 'react-icons/fa';
 import './Blog.css';
 const Blog = (props) => {
     // console.log(props.blogInfo);
@@ -17,10 +18,12 @@ const Blog = (props) => {
                             <img src={userImg}/>
                             <div className='user-info'>
                                 <h3>{ name}</h3>
-                                <p>{ date}</p>
+                                <p>{date}</p>
+                               
                             </div>
                         </div>
-                        <p>{duration } min read</p>
+                        <p>{duration} min read <FaBookmark></FaBookmark></p>
+                        
                     </div>
                     <h5 class="card-title">{title}</h5>
                     <p class="card-text">{hash_tag }</p>
