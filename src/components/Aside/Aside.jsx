@@ -3,8 +3,6 @@ import BookMark from '../BookMark/BookMark';
 import './Aside.css'
 const Aside = ({ asides, blogs, added }) => {
     
-    // console.log(added);
-    
     let readTotal = 0;
     for (const item of asides) {
         readTotal = readTotal + item.duration;

@@ -21,8 +21,8 @@ const Blogs = () => {
     const handleReadMore = (items) => {
         const newAside = [...asides, items];
         setAsides(newAside);
-        //    console.log(title,duration);
     }
+    
     const handleBookMark = (item) => {
         const index = blogs.findIndex((blog) => blog.id === item.id);
         if (index !== -1) {
@@ -37,7 +37,6 @@ const Blogs = () => {
         }
 
     }
-    console.log(added)
 
     return (
         <div className="blogs-container">

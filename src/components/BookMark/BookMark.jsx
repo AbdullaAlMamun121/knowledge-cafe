@@ -1,10 +1,8 @@
 import React from 'react';
 import './BookMark.css';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
-const BookMark = ({ blogs, added }) => {
-    // console.log(added);
 
+const BookMark = ({ blogs }) => {
+   
     let totalBookMark = 0;
     for (const bookMark of blogs) {
         totalBookMark = totalBookMark + bookMark.count;
