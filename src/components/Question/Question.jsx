@@ -19,6 +19,18 @@ const Question = () => {
                     </p>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header">
+                    How to works useState() function in react?
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        With React, useState can store any kind of data. Both simple data types like text, integer, and Boolean as well as more complicated data types like array, object, and function fall under this category. Even unique data types, such as class instances, are included.
+
+                        In essence, everything that can be kept in a JavaScript variable may also be kept in a state controlled by useState. useState can control value that is get from function ,there are two type state like count and setCount count contain current value and setCount contain changing value that is coming from another function. 
+                    </p>
+                </div>
+            </div>
         </div>
     );
 };
