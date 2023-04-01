@@ -48,6 +48,22 @@ const Question = () => {
                     </p>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header">
+                    How does react work?
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        User interfaces may be created using the JavaScript package React. It functions by building the Virtual DOM, a digital version of your user interface. React refreshes the virtual DOM and calculates the bare minimum of modifications required to update the actual DOM when the state of your app changes. Due to the fact that it only updates the necessary DOM elements, this method makes React extremely efficient.
+
+                        An overview of React's functionality is shown below:
+
+                        React produces a quicker, more effective Virtual DOM that is identical to the Real DOM.
+                        React compares the updated Virtual DOM to the old version whenever the state of your app changes.
+                        The bare minimum amount of modifications required to update the DOM is determined by React.
+                    </p>
+                </div>
+            </div>
 
         </div>
     );
