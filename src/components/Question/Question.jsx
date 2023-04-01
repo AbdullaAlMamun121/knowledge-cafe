@@ -27,10 +27,28 @@ const Question = () => {
                     <p class="card-text">
                         With React, useState can store any kind of data. Both simple data types like text, integer, and Boolean as well as more complicated data types like array, object, and function fall under this category. Even unique data types, such as class instances, are included.
 
-                        In essence, everything that can be kept in a JavaScript variable may also be kept in a state controlled by useState. useState can control value that is get from function ,there are two type state like count and setCount count contain current value and setCount contain changing value that is coming from another function. 
+                        In essence, everything that can be kept in a JavaScript variable may also be kept in a state controlled by useState. useState can control value that is get from function ,there are two type state like count and setCount count contain current value and setCount contain changing value that is coming from another function.
                     </p>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header">
+                    How to works useEffect() function in react and how many feature are available?
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        React provides a hook called useEffect that enables you to execute side effects in function components. It automatically runs after each render and includes a cleaning function that starts before the next effect.
+                        These are some frequent applications of useEffect:
+                        data retrieval from a database or API
+                        Changing the title of the document
+                        revising the component state
+                        Events subscription
+                        updating a canvas or other graphic components
+                        UseEffect should not be utilized for every situation, and employing it has drawbacks that must be taken into account. UseEffect, for instance, might make your code more challenging to comprehend and debug when used for sophisticated reasoning.
+                    </p>
+                </div>
+            </div>
+
         </div>
     );
 };

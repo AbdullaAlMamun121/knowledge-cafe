@@ -2,7 +2,7 @@ import React from 'react';
 import { FaBookmark } from 'react-icons/fa';
 import './Blog.css';
 const Blog = (props) => {
-//   console.log(props.blogInfo);
+
     const { id, name, img,userImg, date,duration,title,hash_tag } = props.blogInfo;
     const handleReadMore = props.handleReadMore;
     const handleBookMark = props.handleBookMark;
